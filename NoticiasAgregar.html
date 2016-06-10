@@ -16,12 +16,8 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<link href="css/summernote.css" rel="stylesheet">
+
   </head>
   <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
   <body class="layout-boxed sidebar-mini skin-blue">
@@ -182,7 +178,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-               <li><a href="noticiasagregar.html"><i class="fa fa-circle-o"></i>Agregar Noticia</a></li>
+                <li><a href="noticiasagregar.html"><i class="fa fa-circle-o"></i>Agregar Noticia</a></li>
                     <li><a href=""><i class="fa fa-circle-o"></i>Modificar Noticia</a></li>
                     <li><a href=""><i class="fa fa-circle-o"></i>Eliminar Noticia</a></li>
                     <li><a href=""><i class="fa fa-circle-o"></i>Mostrar Noticias</a></li>
@@ -222,19 +218,35 @@
             <small></small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Principal</a></li>
-            <li><a href="#">--</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Noticias</a></li>
+            <li><a href="#">Agregar Noticias</a></li>
             <li class="active">--</li>
           </ol>
         </section>
 
         <!-- Main content -->
         <section class="content">
-          
-          <!-- Default box -->
-          <div class="well well-lg">
-  <ul><h1>Bienvenido!</h1></ul>
-  </div>
+             <div class="well well-lg">
+       <div class="row">
+                <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>Agregar noticia</h5>
+                        <div class="ibox-tools">
+                           
+                        </div>
+                    </div>
+                    <div class="ibox-content no-padding">
+
+                        <div class="summernote">
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
 
@@ -424,6 +436,22 @@
     <script src="dist/js/app.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
+<script src="js/summernote.js"></script>
+      <script>
+        $(document).ready(function(){
+
+            $('.summernote').summernote();
+
+       });
+        var edit = function() {
+            $('.click2edit').summernote({focus: true});
+        };
+        var save = function() {
+            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
+            $('.click2edit').destroy();
+        };
+    </script>
+
   
 
 </body></html>
