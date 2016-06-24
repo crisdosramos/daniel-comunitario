@@ -16,7 +16,7 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 
-<link href="css/summernote.css" rel="stylesheet">
+  <link href="css/thumbnail-gallery.css" rel="stylesheet">
 
   </head>
   <!-- ADD THE CLASS layout-boxed TO GET A BOXED LAYOUT -->
@@ -170,15 +170,17 @@
                <li><a href="AgregarFotos.html"><i class="fa fa-circle-o"></i>Agregar Foto</a></li>
                     <li><a href=""><i class="fa fa-circle-o"></i>Eliminar Foto</a></li>
                     <li><a href="VerGaleria.html"><i class="fa fa-circle-o"></i>Mostrar Fotos</a></li>
-              </ul>
             </li>
+          </ul>
+
+
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-edit text-red"></i> <span>Noticias</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="noticiasagregar.html"><i class="fa fa-circle-o"></i>Agregar Noticia</a></li>
+               <li><a href="noticiasagregar.html"><i class="fa fa-circle-o"></i>Agregar Noticia</a></li>
                     <li><a href=""><i class="fa fa-circle-o"></i>Modificar Noticia</a></li>
                     <li><a href=""><i class="fa fa-circle-o"></i>Eliminar Noticia</a></li>
                     <li><a href=""><i class="fa fa-circle-o"></i>Mostrar Noticias</a></li>
@@ -218,35 +220,84 @@
             <small></small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Noticias</a></li>
-            <li><a href="#">Agregar Noticias</a></li>
-            <li class="active">--</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Principal</a></li>
+            <li><a href="#">Galería</a></li>
+            <li class="active">Mostrar Galería</li>
           </ol>
         </section>
 
         <!-- Main content -->
         <section class="content">
-             <div class="well well-lg">
-       <div class="row">
-                <div class="col-lg-12">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>Agregar noticia</h5>
-                        <div class="ibox-tools">
-                           
-                        </div>
-                    </div>
-                    <div class="ibox-content no-padding">
+          
+          <!-- Default box -->
+          <div class="well well-lg">
+             <div class="row">
+              <div class="col-lg-12">
+                <h1 class="page-header">Galería</h1>
+            </div>
 
-                        <div class="summernote">
-                           
-                        </div>
-
-                    </div>
-                </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
             </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
             </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
             </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="images/sample-1.jpg" alt="">
+                </a>
+            </div>
+          </div>
+  </div>
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
 
@@ -436,22 +487,6 @@
     <script src="dist/js/app.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
-<script src="js/summernote.js"></script>
-      <script>
-        $(document).ready(function(){
-
-            $('.summernote').summernote();
-
-       });
-        var edit = function() {
-            $('.click2edit').summernote({focus: true});
-        };
-        var save = function() {
-            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
-            $('.click2edit').destroy();
-        };
-    </script>
-
   
 
 </body></html>
